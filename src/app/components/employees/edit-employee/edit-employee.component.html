@@ -1,0 +1,57 @@
+
+<div class="container">
+    <div class="card my-4">
+
+        <div class="card-header">
+                <h5>Edit Employee</h5>
+        </div>
+
+        <div class="card-body">
+            <form #form="ngForm">
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Name </label>
+                            <input name="name" [(ngModel)]="employeeDetails.name" type="text"  class="form-control" id="Name" aria-describedby="name" placeholder="Enter Name">
+                          </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">Email </label>
+                            <input name="email" [(ngModel)]="employeeDetails.email" type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+                          </div>
+                    </div>
+                </div>
+
+
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="phone">Phone </label>
+                            <input name="phone"  [(ngModel)]="employeeDetails.phone" type="tel" class="form-control" id="Phone" aria-describedby="phone" placeholder="Enter Phone">
+                          </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="Department">Department </label>
+                            <input name="department" [(ngModel)]="employeeDetails.department" type="text" class="form-control" id="Department" aria-describedby="Department" placeholder="Enter Department">
+                          </div>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label for="Salary">Salary</label>
+                        <input name="salary" [(ngModel)]="employeeDetails.salary" type="number" class="form-control" id="Salary" aria-describedby="emailHelp" placeholder="Enter Salary">
+
+                    </div>
+                </div>
+               
+              <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>

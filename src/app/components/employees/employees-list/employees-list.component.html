@@ -1,0 +1,32 @@
+<div class="container">
+    <table class="table table-hover table-responsive table-border" *ngIf="employees">
+        <thead>
+            <tr>
+                <td>Id</td>
+
+                <td>Name</td>
+                <td>Email</td>
+                <td>Salary</td>
+                <td>Department</td>
+                <td>Phone</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{ employee.id}}</td>
+                <td>{{ employee.name}}</td>
+
+                <td>{{ employee.email}}</td>
+
+                <td>{{ employee.salary}}</td>
+
+                <td>{{ employee.department}}</td>
+                <td>{{ employee.phone}}</td>
+                <td><a  [routerLink]="['/employee','edit',employee.id]" class="btn btn-success">Edit</a></td>
+
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!employees">Employee not available</p>
+</div>
